@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<!--
+  ============================================================
+  SITIO WEB — Ps. María José Arias Toro, Psicóloga Clínica
+  ============================================================
+  Adaptado a partir del sitio de Matilde Pizarro Toro
+  (fonoaudiología), manteniendo la misma arquitectura, estilos,
+  animaciones, selector de idioma ES/EN, SEO y estructura de
+  secciones, pero SIN el sistema de agenda: aquí "Reservar hora"
+  lleva directamente al perfil de Doctoralia y a WhatsApp.
+
+  QUÉ TIENES QUE REVISAR ANTES DE PUBLICAR
+  (todo lo marcado con subrayado punteado naranja, clase "fill-me"):
+    1) TELÉFONO / WHATSAPP: se usó +56 9 9135 6265, que es el
+       número publicado en el perfil de Doctoralia (consulta en
+       Alt Potencial). Si tu WhatsApp personal es otro, cámbialo
+       en: el botón flotante, la sección Contacto, los enlaces
+       wa.me de todo el archivo y el JSON-LD del <head>.
+    2) CORREO: ps.mjose.arit@gmail.com (tomado de Doctoralia).
+    3) VALORES: los precios de la sección "Valores" vienen del
+       perfil de Doctoralia (orientación online $18.000, talleres
+       $35.000, técnicas proyectivas gráficas $35.000). Confirma
+       el valor de la sesión presencial y online particular.
+    4) FOTO: ya está cargada en assets/img/mariajose-foto.jpg (800x800 px).
+       Si más adelante quieres cambiarla, reemplaza ese archivo por otro
+       del mismo nombre y tamaño cuadrado.
+    5) OPINIONES: los tres testimonios de la sección "Opiniones"
+       son un resumen de reseñas publicadas en Doctoralia. Si
+       quieres publicar citas textuales de pacientes, reemplaza
+       esos textos por los originales con su autorización.
+    6) DOMINIO: cuando publiques en psicologamariajoseat.com (o
+       el dominio final), reemplaza las URLs de <link rel="canonical">,
+       og:image y twitter:image por URLs absolutas.
+
+  Los archivos de fotos van en la carpeta assets/ junto a este
+  index.html — mantén esa carpeta al subir el sitio a tu hosting.
+  ============================================================
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ps. María José Arias Toro | Psicóloga en Viña del Mar — Online y presencial</title>
+<meta name="description" content="María José Arias Toro, Psicóloga clínica con Magíster en Clínica (Psicodiagnóstico e Intervenciones Terapéuticas). Psicoterapia para niñxs, adolescentes, adultos y adultos mayores: ansiedad, depresión, duelos, autoestima, apego y competencias parentales. Atención online y presencial en Viña del Mar.">
+<meta name="theme-color" content="#7B6AA8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ps. María José Arias Toro | Psicóloga en Viña del Mar">
+<meta property="og:description" content="Psicoterapia para niñxs, adolescentes y adultos. Ansiedad, depresión, duelos, autoestima, apego y parentalidad. Online y presencial en Viña del Mar.">
+<meta property="og:image" content="assets/img/mariajose-foto.jpg">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ps. María José Arias Toro | Psicóloga en Viña del Mar">
+<meta name="twitter:description" content="Psicoterapia para niñxs, adolescentes y adultos. Online y presencial en Viña del Mar.">
+<meta name="twitter:image" content="assets/img/mariajose-foto.jpg">
+<link rel="canonical" href="https://psicologamariajoseat.com/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237B6AA8'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23F6F1FA' stroke-width='4' opacity='.55'/%3E%3Ccircle cx='50' cy='50' r='19' fill='none' stroke='%23F6F1FA' stroke-width='4' opacity='.8'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23F6F1FA'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Las tipografías se cargan de forma asíncrona (preload + cambio a
+  "stylesheet" en cuanto termina de llegar) para que no bloqueen el
+  primer renderizado en celulares con conexión lenta.
+-->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" onload="this.onload=null;this.rel='stylesheet';">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"></noscript>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": "Ps. María José Arias Toro — Psicóloga Clínica",
+  "description": "Psicóloga clínica con Magíster en Clínica, mención Psicodiagnóstico e Intervenciones Terapéuticas. Psicoterapia infanto juvenil, adultos y adultos mayores. Atención online y presencial en Viña del Mar.",
+  "areaServed": ["Viña del Mar", "Valparaíso", "Quilpué", "Villa Alemana", "Concón"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1 Oriente 252 (Centro Alt Potencial)",
+    "addressLocality": "Viña del Mar",
+    "addressRegion": "Valparaíso",
+    "postalCode": "2520771",
+    "addressCountry": "CL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.0201454,
+    "longitude": -71.5495605
+  },
+  "telephone": "+56 9 9135 6265",
+  "email": "ps.mjose.arit@gmail.com",
+  "medicalSpecialty": "Psychiatric",
+  "availableLanguage": ["Spanish"],
+  "sameAs": [
+    "https://www.doctoralia.cl/perfil/maria-jose-arias-toro",
+    "https://www.instagram.com/ps.mariajose.at/",
+    "https://www.linkedin.com/in/mar%C3%ADa-jos%C3%A9-arias-toro-013212158"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Necesito una derivación médica para iniciar terapia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No es necesario. Se puede agendar directamente una primera sesión; si durante el proceso se requiere el apoyo de un psiquiatra o neurólogo, se indica y se coordina en conjunto." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Desde qué edad atiendes a niños y niñas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En atención presencial se atiende desde los 4 años y en modalidad online desde los 6 años, además de adolescentes, adultos y adultos mayores." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atiendes con Fonasa o Isapre?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Se emite boleta reembolsable en Isapres y se acepta Fonasa según la modalidad y el lugar de atención. La cobertura depende de cada previsión, por lo que conviene consultarla antes de la primera sesión." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura una sesión de psicoterapia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cada sesión dura aproximadamente 50 minutos. La primera sesión está destinada a conocer el motivo de consulta y definir en conjunto un plan de trabajo." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con qué frecuencia son las sesiones?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Habitualmente son semanales al inicio del proceso y luego se espacian a cada quince días o mensualmente, según los avances y las necesidades de cada persona." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué enfoque terapéutico utilizas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un enfoque de intervención integral: una formación inicial psicoanalítica que se ha ido complementando con herramientas emocionales, socio-familiares y cognitivo-conductuales, adaptadas al motivo de consulta de cada persona." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué necesito para una sesión online?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un celular, tablet o computador con cámara y micrófono, buena conexión a internet y un espacio privado y tranquilo donde poder conversar sin interrupciones." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Las sesiones son confidenciales?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todo lo conversado está protegido por el secreto profesional. En procesos con niñas, niños y adolescentes se comparten con las figuras parentales las orientaciones necesarias, resguardando siempre la intimidad del proceso." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Realizas psicodiagnóstico e informes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Se realiza psicodiagnóstico infanto juvenil y de adultos con entrevistas, pruebas psicométricas y técnicas proyectivas gráficas, con entrega de informe escrito y una sesión de devolución de resultados." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo cancelar o reprogramar mi hora?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, avisando con la mayor anticipación posible por WhatsApp o desde Doctoralia, para liberar el horario y coordinar una nueva sesión." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo reservo una hora?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Directamente desde el perfil de Doctoralia, eligiendo día y hora disponible, o escribiendo por WhatsApp para coordinar." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde puedo leer opiniones de otras personas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En el perfil de Doctoralia de María José Arias Toro, donde hay opiniones verificadas de pacientes." }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --paper:#F8F5F1;
+  --paper-alt:#FFFFFF;
+  --ink:#2C2A3A;
+  --ink-soft:#736E85;
+  --calm:#7B6AA8;
+  --calm-deep:#584A86;
+  --amber:#D9A05B;
+  --amber-deep:#B9823C;
+  --sage:#7FA58F;
+  --line:#E9E3F1;
+  --radius-sm:12px;
+  --radius-md:20px;
+  --radius-lg:30px;
+  --shadow-soft:0 18px 40px -22px rgba(44,42,58,0.32);
+  --font-display:'Fraunces', Georgia, serif;
+  --font-body:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+}
+
+/* ============================================================
+   RESET / BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
+}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+ul,ol{list-style:none;margin:0;padding:0;}
+h1,h2,h3,p{margin:0;}
+button{font:inherit;background:none;border:none;}
+section[id]{scroll-margin-top:84px;}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.skip-link{position:absolute;left:1rem;top:-60px;background:var(--ink);color:#fff;padding:.7rem 1.2rem;border-radius:0 0 10px 10px;z-index:300;transition:top .25s ease;text-decoration:none;font-weight:600;}
+.skip-link:focus{top:0;}
+:focus-visible{outline:3px solid var(--calm);outline-offset:3px;}
+
+.container{max-width:1180px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,2.5rem);}
+
+.eyebrow{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--calm);margin-bottom:1rem;font-weight:500;}
+.fill-me{border-bottom:2px dashed var(--amber);padding-bottom:1px;font-weight:600;}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-body);font-weight:600;font-size:.95rem;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;white-space:nowrap;}
+.btn-primary{background:var(--amber);color:var(--ink);box-shadow:var(--shadow-soft);}
+.btn-primary:hover{background:var(--amber-deep);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--calm);border-color:var(--calm);}
+.btn-ghost:hover{background:var(--calm);color:#fff;}
+.btn-sm{padding:.6rem 1.15rem;font-size:.85rem;}
+
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(248,245,241,0.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.9rem;}
+.brand{display:flex;flex-direction:column;line-height:1.2;text-decoration:none;order:1;}
+.brand-name{font-family:var(--font-display);font-weight:600;font-size:1.2rem;color:var(--ink);}
+.brand-tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--calm);}
+.nav-links{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:.55rem 1.1rem;order:3;flex-basis:100%;list-style:none;margin:0;padding:0;}
+.nav-links a:not(.btn){font-weight:500;font-size:.86rem;text-decoration:none;color:var(--ink);position:relative;padding-bottom:2px;white-space:nowrap;}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .25s ease;}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1);}
+.nav-actions{display:flex;align-items:center;gap:.75rem;order:2;}
+.lang-switch{display:flex;align-items:center;gap:.3rem;background:transparent;border:1px solid rgba(0,0,0,.15);border-radius:999px;padding:.3rem .65rem;font-family:inherit;font-size:.8rem;font-weight:600;cursor:pointer;line-height:1;}
+.lang-switch .lang-opt{opacity:.45;transition:opacity .15s ease;}
+.lang-switch .lang-opt.is-active{opacity:1;color:var(--calm);}
+.lang-switch .lang-sep{opacity:.3;}
+.lang-switch:hover .lang-opt{opacity:.8;}
+.lang-switch:hover .lang-opt.is-active{opacity:1;}
+
+@media (max-width:520px){
+  .nav-links{gap:.5rem .8rem;}
+  .nav-links a:not(.btn){font-size:.8rem;}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;overflow:hidden;padding-top:clamp(3.5rem,7vw,6rem);}
+.hero::before{content:"";position:absolute;top:-130px;right:-160px;width:520px;height:520px;background:radial-gradient(circle, rgba(123,106,168,.20), transparent 70%);border-radius:50%;pointer-events:none;}
+.hero::after{content:"";position:absolute;bottom:-160px;left:-150px;width:440px;height:440px;background:radial-gradient(circle, rgba(217,160,91,.16), transparent 70%);border-radius:50%;pointer-events:none;}
+.hero-inner{position:relative;padding-bottom:clamp(2.5rem,5vw,4rem);}
+.hero-title{font-family:var(--font-display);font-weight:600;font-size:clamp(2.3rem,1.55rem + 3.3vw,4.1rem);line-height:1.08;color:var(--ink);max-width:17ch;margin-bottom:1.4rem;}
+.hero-title em{font-style:italic;font-weight:500;color:var(--calm);}
+.hero-sub{font-size:1.15rem;font-weight:600;margin-bottom:.9rem;color:var(--ink);}
+.hero-desc{font-size:1.05rem;color:var(--ink-soft);max-width:50ch;margin-bottom:2.2rem;line-height:1.65;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.2rem;}
+.wave-wrap{margin-bottom:2.6rem;}
+.wave-wrap svg{width:100%;height:clamp(100px,17vw,190px);}
+.stop-a{stop-color:var(--amber);}
+.stop-b{stop-color:var(--calm);}
+.stop-c{stop-color:var(--calm-deep);}
+.hero-stats{display:flex;flex-wrap:wrap;gap:2.2rem;padding-top:2rem;border-top:1px solid var(--line);}
+.stat{display:flex;flex-direction:column;gap:.3rem;}
+.stat-label{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-soft);}
+.stat-value{font-weight:600;color:var(--ink);}
+
+/* ============================================================
+   SECTION GENERIC
+   ============================================================ */
+.section{padding-block:clamp(4rem,7vw,7rem);}
+.section-alt{background:var(--paper-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.section-head{max-width:660px;margin-bottom:3rem;}
+.section-title{font-family:var(--font-display);font-weight:600;font-size:clamp(1.85rem,1.5rem + 1.5vw,2.5rem);color:var(--ink);margin-bottom:1rem;line-height:1.18;}
+.section-lead{color:var(--ink-soft);font-size:1.05rem;line-height:1.65;}
+.section-dark{background:var(--ink);}
+.section-dark .eyebrow{color:var(--amber);}
+.section-dark .section-title{color:var(--paper);}
+.section-dark .section-lead{color:#CFC7DE;}
+
+/* ============================================================
+   SOBRE MÍ
+   ============================================================ */
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:start;}
+.about-photo{text-align:center;position:sticky;top:110px;}
+.photo-frame{position:relative;width:230px;height:230px;border-radius:32px;margin:0 auto 1.1rem;background:linear-gradient(155deg, rgba(123,106,168,.18), rgba(217,160,91,.20));border:3px solid var(--paper-alt);box-shadow:var(--shadow-soft);overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--calm);}
+.photo-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.photo-frame svg{width:64px;height:64px;}
+.photo-caption{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
+.about-content p + p{margin-top:1rem;}
+.about-content .section-lead strong{color:var(--ink);}
+.about-credentials{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem;}
+.about-credentials li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.85rem;color:var(--ink-soft);}
+.about-credentials li strong{color:var(--ink);font-weight:600;}
+@media (max-width:880px){.about-grid{grid-template-columns:1fr;gap:2rem;}.about-photo{text-align:left;position:static;}.photo-frame{margin:0 0 1rem;}}
+
+/* ============================================================
+   TARJETAS (modalidades / servicios)
+   ============================================================ */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.5rem;}
+.service-card{background:var(--paper-alt);border:1px solid var(--line);border-radius:var(--radius-md);padding:clamp(1.5rem,2vw,2rem);transition:transform .25s ease, box-shadow .25s ease;}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);}
+.icon-badge{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg, rgba(123,106,168,0.14), rgba(217,160,91,0.18));color:var(--calm);margin-bottom:1.1rem;}
+.icon-badge svg{width:26px;height:26px;}
+.service-card h3{font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;}
+.service-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.55;}
+.service-card .card-meta{display:block;margin-top:.8rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--calm);}
+
+/* ============================================================
+   ESPECIALIDADES
+   ============================================================ */
+.specialty-tags{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:1.5rem 0 0;padding:0;}
+.specialty-tags li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;font-size:.92rem;line-height:1.2;}
+.section-alt .specialty-tags li{background:var(--paper);}
+.specialty-note{margin-top:1.4rem;font-size:.95rem;}
+
+/* ============================================================
+   PROCESO (pasos)
+   ============================================================ */
+.steps-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.75rem;margin:0;}
+.step{display:flex;gap:1rem;align-items:flex-start;}
+.step-num{font-family:var(--font-mono);font-weight:500;font-size:1.4rem;color:var(--amber);line-height:1.1;}
+.step h3{font-size:1.02rem;font-weight:700;margin-bottom:.35rem;color:var(--ink);}
+.step p{font-size:.9rem;color:var(--ink-soft);line-height:1.55;}
+
+/* ============================================================
+   OPINIONES
+   ============================================================ */
+.testimonios-section{position:relative;overflow:hidden;background:linear-gradient(180deg, #FFFFFF 0%, #F1ECF7 100%);}
+.testimonios-section::before{content:"";position:absolute;top:-90px;left:50%;transform:translateX(-50%);width:680px;height:300px;background:radial-gradient(ellipse, rgba(123,106,168,.16), transparent 72%);pointer-events:none;}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem;position:relative;}
+.testi-card{background:var(--paper-alt);border:1px solid var(--line);border-radius:var(--radius-md);padding:1.6rem 1.5rem;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;transition:transform .25s ease;}
+.testi-card:hover{transform:translateY(-4px);}
+.testi-stars{color:#E2A93B;letter-spacing:.14em;font-size:.95rem;margin-bottom:.8rem;}
+.testi-quote{font-size:.95rem;color:var(--ink);line-height:1.6;font-style:italic;margin-bottom:1rem;}
+.testi-name{display:flex;align-items:center;gap:.5rem;margin-top:auto;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--calm);}
+.testi-name svg{width:15px;height:15px;color:var(--amber);flex-shrink:0;}
+.testi-note{margin-top:2.4rem;font-size:.85rem;color:var(--ink-soft);text-align:center;position:relative;}
+.doctoralia-card{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;background:var(--paper-alt);border:1px solid var(--line);border-radius:16px;padding:1.4rem 1.6rem;margin-top:2rem;position:relative;box-shadow:var(--shadow-soft);}
+.doctoralia-card .doctoralia-stars{color:#E2A93B;font-size:1.1rem;letter-spacing:.1em;}
+.doctoralia-card p{margin:0;flex:1 1 260px;}
+
+/* ============================================================
+   UBICACIÓN
+   ============================================================ */
+.ubicacion-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.ubicacion-grid .section-lead{margin-bottom:1.6rem;}
+.map-frame{border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);}
+.map-frame iframe{width:100%;height:360px;border:0;display:block;}
+.place-list{display:grid;gap:1rem;margin:1.6rem 0;}
+.place{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:1rem 1.2rem;}
+.section-alt .place{background:var(--paper);}
+.place h3{font-size:1rem;font-weight:700;margin-bottom:.25rem;}
+.place p{font-size:.9rem;color:var(--ink-soft);margin:0 0 .5rem;}
+.place a{font-size:.85rem;color:var(--calm);font-weight:600;text-decoration:none;}
+.place a:hover{text-decoration:underline;}
+@media (max-width:880px){.ubicacion-grid{grid-template-columns:1fr;}}
+
+/* ============================================================
+   VALORES
+   ============================================================ */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem;}
+.price-card{position:relative;background:linear-gradient(150deg,var(--calm-deep) 0%,var(--calm) 58%,var(--amber-deep) 135%);border-radius:var(--radius-md);padding:clamp(1.6rem,2.4vw,2.1rem);display:flex;flex-direction:column;box-shadow:0 22px 46px -20px rgba(88,74,134,0.45);color:#fff;overflow:hidden;isolation:isolate;}
+.price-card::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle,rgba(255,255,255,.16) 1.5px,transparent 1.5px);background-size:16px 16px;opacity:.5;}
+.price-kicker{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);margin:0 0 .9rem;}
+.price-card h3{margin:0 0 .6rem;font-size:1.22rem;font-family:var(--font-display);}
+.price-value{font-family:var(--font-mono);font-size:1.7rem;font-weight:600;color:#fff;margin:.2rem 0 1rem;}
+.price-value span{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.8);margin-left:.35rem;}
+.price-card p{color:rgba(255,255,255,.92);font-size:.92rem;margin:0 0 .8rem;}
+.price-divider{border:none;border-top:1.5px dashed rgba(255,255,255,.45);margin:.4rem 0 1rem;}
+.price-card .btn{margin-top:auto;align-self:flex-start;}
+.price-card .btn-ghost{color:#fff;border-color:#fff;}
+.price-card .btn-ghost:hover{background:#fff;color:var(--calm-deep);}
+.price-card .fill-me{border-bottom-color:rgba(255,255,255,.8);}
+.prevision-note{margin-top:2rem;font-size:.92rem;line-height:1.6;color:var(--ink);background:var(--paper-alt);border:1px solid var(--line);border-radius:var(--radius-sm);padding:1rem 1.2rem;}
+.prevision-note strong{color:var(--calm-deep);}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:.7rem;}
+.faq-item{background:var(--paper-alt);border:1.5px solid var(--line);border-radius:var(--radius-sm);padding:.2rem 1.2rem;}
+.faq-item summary{cursor:pointer;padding:1rem 0;font-weight:600;color:var(--ink);list-style:none;position:relative;padding-right:2rem;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';position:absolute;right:0;top:.9rem;font-size:1.3rem;color:var(--calm);line-height:1;}
+.faq-item[open] summary::after{content:'−';}
+.faq-item p{padding-bottom:1.1rem;color:var(--ink-soft);margin:0;}
+
+/* ============================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ============================================================ */
+.whatsapp-float{position:fixed;bottom:calc(1.3rem + env(safe-area-inset-bottom));right:calc(1.3rem + env(safe-area-inset-right));width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.4);z-index:250;transition:transform .2s ease;}
+.whatsapp-float:hover{transform:scale(1.08);}
+.whatsapp-float svg{width:30px;height:30px;}
+@media (max-width:480px){.whatsapp-float{width:52px;height:52px;bottom:calc(1rem + env(safe-area-inset-bottom));right:calc(1rem + env(safe-area-inset-right));}}
+
+/* ============================================================
+   CONTACTO (banda oscura)
+   ============================================================ */
+.contacto-inner{display:flex;flex-direction:column;gap:2.4rem;align-items:flex-start;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.25rem;width:100%;}
+.contact-item{display:flex;align-items:center;gap:.9rem;text-decoration:none;color:var(--paper);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:1rem 1.2rem;border-radius:var(--radius-md);transition:background .25s ease, transform .25s ease;min-width:0;}
+.contact-item:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+.contact-item svg{width:22px;height:22px;color:var(--amber);flex-shrink:0;}
+.contact-item>div{min-width:0;}
+.contact-item>div>span:last-child{display:block;overflow-wrap:anywhere;word-break:break-word;}
+.contact-label{display:block;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:#BDB4CF;margin-bottom:.25rem;}
+.contact-item .fill-me{color:var(--paper);border-bottom-color:var(--amber);font-weight:600;}
+.contact-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{background:var(--calm-deep);color:#EFE9F7;padding-block:2.4rem;}
+.footer-inner{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center;}
+.footer-name{font-family:var(--font-display);font-weight:600;font-size:1.1rem;color:var(--paper);}
+.footer-tag{font-size:.85rem;color:#DCD2EC;margin-top:.2rem;}
+.footer-links{display:flex;gap:1.4rem;flex-wrap:wrap;}
+.footer-links a{text-decoration:none;color:#EFE9F7;font-size:.9rem;}
+.footer-links a:hover{color:var(--amber);}
+.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;color:#DCD2EC;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+.footer-note{margin-top:1rem;font-size:.78rem;color:#C9BEDE;max-width:70ch;}
+</style>
+</head>
+<body>
+<a class="skip-link" data-i18n="skip" href="#main-content">Saltar al contenido principal</a>
+
+<a class="whatsapp-float" href="https://wa.me/56991356265?text=Hola%20Mar%C3%ADa%20Jos%C3%A9%2C%20quisiera%20consultar%20por%20una%20hora" target="_blank" rel="noopener noreferrer" data-i18n-aria="aria.whatsapp" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.51 3.62 1.4 5.13L2 22l5.13-1.47a9.8 9.8 0 0 0 4.9 1.32h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.83 14.02c-.25.7-1.45 1.35-2 1.44-.53.09-1.02.13-1.6-.1-.37-.14-.85-.31-1.46-.6-2.57-1.14-4.24-3.75-4.37-3.93-.13-.18-1.05-1.42-1.05-2.7s.66-1.9.9-2.16c.24-.26.52-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.57.8 1.98.87 2.12.07.14.11.31.02.5-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.13-.28.27-.12.54.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.61-.05.17-.17.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.06.11.06.65-.19 1.35Z"></path></svg>
+</a>
+
+<header class="site-header">
+  <div class="nav-inner container">
+    <a class="brand" href="#inicio">
+      <span class="brand-name">María José Arias</span>
+      <span data-i18n="brand.tag" class="brand-tag">Psicóloga clínica</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a data-i18n="nav.modalidades" href="#modalidades">Modalidades</a></li>
+      <li><a data-i18n="nav.sobremi" href="#sobre-mi">Sobre mí</a></li>
+      <li><a data-i18n="nav.servicios" href="#servicios">Servicios</a></li>
+      <li><a data-i18n="nav.especialidades" href="#especialidades">Especialidades</a></li>
+      <li><a data-i18n="nav.proceso" href="#proceso">Cómo trabajo</a></li>
+      <li><a data-i18n="nav.opiniones" href="#opiniones">Opiniones</a></li>
+      <li><a data-i18n="nav.ubicacion" href="#ubicacion">Ubicación</a></li>
+      <li><a data-i18n="nav.valores" href="#valores">Valores</a></li>
+      <li><a data-i18n="nav.faq" href="#faq">FAQ</a></li>
+      <li><a data-i18n="nav.contacto" href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button type="button" class="lang-switch" id="langSwitch" aria-label="Cambiar idioma / Switch language" title="Español / English">
+        <span class="lang-opt is-active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <a data-i18n="cta.reservar" class="btn btn-primary btn-sm" href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">Reservar hora</a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <p data-i18n="hero.eyebrow" class="eyebrow reveal">Psicóloga clínica · Online y presencial en Viña del Mar</p>
+      <h1 class="hero-title reveal" data-i18n-html="hero.title">Un espacio seguro para <em>volver</em> a ti</h1>
+      <p data-i18n="hero.sub" class="hero-sub reveal">Ps. María José Arias Toro · Psicoterapia para niñxs, adolescentes, adultos y adultos mayores.</p>
+      <p data-i18n="hero.desc" class="hero-desc reveal">Alrededor de catorce años acompañando procesos personales desde una mirada integral, que se adapta a lo que cada persona necesita en el ámbito emocional, socio-familiar y cognitivo-conductual. Atención online y presencial en Viña del Mar.</p>
+      <div class="hero-actions reveal">
+        <a data-i18n="cta.reservarArrow" class="btn btn-primary" href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">Reservar hora →</a>
+        <a data-i18n="cta.enfoque" class="btn btn-ghost" href="#sobre-mi">Conocer mi enfoque</a>
+      </div>
+
+      <div class="wave-wrap reveal" aria-hidden="true">
+        <svg id="calmWave" viewBox="0 0 1200 220" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" class="stop-a"></stop>
+              <stop offset="55%" class="stop-b"></stop>
+              <stop offset="100%" class="stop-c"></stop>
+            </linearGradient>
+          </defs>
+          <path id="waveformPath" d="" fill="none" stroke="url(#waveGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat"><span data-i18n="stat.atencionLabel" class="stat-label">ATENCIÓN</span><span data-i18n="stat.atencionValue" class="stat-value">Niñxs, adolescentes y adultos</span></div>
+        <div class="stat"><span data-i18n="stat.expLabel" class="stat-label">EXPERIENCIA</span><span data-i18n="stat.expValue" class="stat-value">≈14 años en área infanto juvenil</span></div>
+        <div class="stat"><span data-i18n="stat.modLabel" class="stat-label">MODALIDAD</span><span data-i18n="stat.modValue" class="stat-value">Online · Presencial en Viña del Mar</span></div>
+        <div class="stat"><span data-i18n="stat.regLabel" class="stat-label">REGISTRO</span><span data-i18n="stat.regValue" class="stat-value">N° Colegiado 216860</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODALIDADES ============ -->
+  <section class="section" id="modalidades">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="mod.eyebrow" class="eyebrow">Modalidades</p>
+        <h2 data-i18n="mod.title" class="section-title">Elige cómo prefieres atenderte</h2>
+        <p data-i18n="mod.lead" class="section-lead">Atiendo online por videoconsulta y de forma presencial en dos consultas de Viña del Mar, para que la terapia se adapte a tu rutina y no al revés.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="11" width="20" height="16" rx="3"></rect>
+              <path d="M26 16.5l8-4.5v15l-8-4.5"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="mod.online.title">Online</h3>
+          <p data-i18n="mod.online.text">Sesiones por videollamada desde cualquier lugar de Chile o del extranjero. Ideal si te acomoda atenderte desde tu casa, viajas seguido o vives fuera de la región.</p>
+          <span data-i18n="mod.online.meta" class="card-meta">Desde los 6 años · Adultos</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 35s11-10.5 11-18a11 11 0 1 0-22 0c0 7.5 11 18 11 18Z"></path>
+              <circle cx="20" cy="17" r="4"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="mod.alt.title">Presencial · Centro Alt Potencial</h3>
+          <p data-i18n-html="mod.alt.text">Atención en box privado en 1 Oriente 252, Viña del Mar, en un espacio pensado para el trabajo clínico infanto juvenil y de adultos. Dirección y mapa en <a href="#ubicacion">Ubicación ↓</a>.</p>
+          <span data-i18n="mod.alt.meta" class="card-meta">Desde los 4 años · Adultos</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 19L20 8l13 11"></path>
+              <path d="M10 17v13h20V17"></path>
+              <path d="M17 30v-8h6v8"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="mod.casona.title">Presencial · Centro Casona Poniente</h3>
+          <p data-i18n-html="mod.casona.text">Segunda consulta presencial en Viña del Mar, en un entorno tranquilo y acogedor. Puedes elegir la que te quede más cómoda al momento de reservar. Ver <a href="#ubicacion">Ubicación ↓</a>.</p>
+          <span data-i18n="mod.casona.meta" class="card-meta">Desde los 4 años · Adultos</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE MÍ ============ -->
+  <section class="section section-alt" id="sobre-mi">
+    <div class="container about-grid">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <!-- Deja tu foto en assets/img/mariajose-foto.jpg. Si el archivo
+               no existe, se elimina sola y queda el ícono de respaldo. -->
+          <img src="assets/img/mariajose-foto.jpg" alt="Ps. María José Arias Toro, Psicóloga clínica" width="800" height="800" loading="lazy" onerror="this.remove()">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="32" cy="23" r="11"></circle>
+            <path d="M12 54c2-10 10-16 20-16s18 6 20 16"></path>
+          </svg>
+        </div>
+        <p data-i18n="about.caption" class="photo-caption">Psicóloga · Universidad Andrés Bello</p>
+      </div>
+      <div class="about-content reveal">
+        <p data-i18n="about.eyebrow" class="eyebrow">Sobre mí</p>
+        <h2 data-i18n="about.title" class="section-title">Hola, soy María José</h2>
+        <p data-i18n="about.p1" class="section-lead">Soy María José Arias Toro, Psicóloga, con un Magíster en Clínica, mención en Psicodiagnóstico e Intervenciones terapéuticas. Tengo alrededor de catorce años de experiencia en área infanto juvenil. Conjuntamente, he trabajado con población adulta y adulta mayor, observando grandes avances en cada uno de los procesos psicoterapéuticos de mis pacientes.</p>
+        <p data-i18n="about.p2" class="section-lead">A lo largo de mi trayectoria profesional me he desempeñado en contexto clínico, educacional, social y en atención primaria de la salud.</p>
+        <p data-i18n="about.p3" class="section-lead">Mi proceso formativo se llevó a cabo inicialmente desde la mirada psicoanalítica y durante el transcurso de mi carrera profesional se ha conformado hacia un enfoque de intervención integral, que se adapta a las necesidades de cada consultante, en el ámbito emocional, socio-familiar y cognitivo-conductual.</p>
+        <p data-i18n="about.p4" class="section-lead">Me encuentro en formación continua y he realizado cursos en diversas temáticas como por ejemplo en: educación emocional, autoestima, desarrollo de habilidades personales y sociales, orientación parental, ansiedad, depresión, intervención lúdica e intervención asistida con animales.</p>
+        <p data-i18n="about.p5" class="section-lead">En la actualidad me desempeño como psicóloga clínica con niñxs, adolescentes y adultos en modalidad online y presencial, acompañando sus procesos personales y abordando diversas temáticas, a través de una mirada unificada y según lo que requiera cada persona en cuanto a su motivo de consulta.</p>
+        <p data-i18n="about.p6" class="section-lead">Me especializo en tratar trastornos de ansiedad, cuadros de estrés, trastornos depresivos, baja tolerancia a la frustración, abordaje desde lo emocional de temáticas conductuales asociadas o no al TDAH o TDA, autoestima, autoconocimiento, gestión emocional, duelos, orientación y crecimiento personal, trastornos del sueño, orientación vocacional con adolescentes, desarrollo de habilidades personales y sociales, desarrollo y fortalecimiento de competencias parentales, patrones de apego, dependencia emocional, temáticas con figuras parentales, heridas de infancia, temáticas sociales y laborales, trastornos psicosomáticos y nutrición emocional.</p>
+        <p data-i18n="about.p7" class="section-lead"><strong>Un gusto, bienvenidx.</strong></p>
+
+        <ul class="about-credentials">
+          <li data-i18n-html="about.cred1"><strong>Psicóloga</strong> · Universidad Andrés Bello, 2011</li>
+          <li data-i18n-html="about.cred2"><strong>Magíster en Clínica</strong> · Psicodiagnóstico e Intervenciones Terapéuticas</li>
+          <li data-i18n-html="about.cred3"><strong>N° Colegiado</strong> 216860</li>
+          <li data-i18n-html="about.cred4"><strong>≈14 años</strong> de experiencia clínica</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="serv.eyebrow" class="eyebrow">Servicios</p>
+        <h2 data-i18n="serv.title" class="section-title">¿En qué puedo acompañarte?</h2>
+        <p data-i18n="serv.lead" class="section-lead">Evaluación, psicodiagnóstico y psicoterapia a lo largo de todo el ciclo vital, con una mirada integral que se ajusta al motivo de consulta de cada persona.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="20" cy="13" r="6"></circle>
+              <path d="M9 33c1.6-6.5 5.8-10 11-10s9.4 3.5 11 10"></path>
+              <path d="M14 27l-3 6M26 27l3 6"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.infantil.title">Psicoterapia infantil</h3>
+          <p data-i18n="serv.infantil.text">Acompañamiento a niñas y niños a través de la intervención lúdica: el juego como vía para expresar, ordenar y elaborar lo que todavía no alcanzan a poner en palabras.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 10.5C7 8.6 8.6 7 10.5 7h19C31.4 7 33 8.6 33 10.5v12C33 24.4 31.4 26 29.5 26H17l-6.5 6v-6h-1C8.6 26 7 24.4 7 22.5v-12Z"></path>
+              <path d="M14 14.5h12M14 18.5h8"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.adolescente.title">Psicoterapia en adolescentes</h3>
+          <p data-i18n="serv.adolescente.text">Un espacio propio para hablar de identidad, ansiedad, autoestima, relaciones, presión académica y decisiones importantes, con la confianza y la privacidad que la adolescencia necesita.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 33s-11-6.6-11-14a6.6 6.6 0 0 1 11-4.8A6.6 6.6 0 0 1 31 19c0 7.4-11 14-11 14Z"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.adulto.title">Psicoterapia de adultos y adultos mayores</h3>
+          <p data-i18n="serv.adulto.text">Procesos individuales para trabajar ansiedad, estrés, ánimo, duelos, dependencia emocional, heridas de infancia, temáticas laborales y crecimiento personal.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="6" width="22" height="28" rx="3"></rect>
+              <path d="M15 14h10M15 20h10M15 26h6"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.psicodiag.title">Psicodiagnóstico</h3>
+          <p data-i18n="serv.psicodiag.text">Evaluación psicológica infanto juvenil y de adultos mediante entrevistas, pruebas psicométricas y técnicas proyectivas gráficas, con informe escrito y sesión de devolución de resultados.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="14" cy="14" r="5"></circle>
+              <circle cx="27" cy="16" r="4"></circle>
+              <path d="M6 31c1.4-5 4.4-7.5 8-7.5s6.6 2.5 8 7.5"></path>
+              <path d="M24 31c.8-3.4 2.6-5.2 5-5.2s4.2 1.8 5 5.2"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.parental.title">Orientación y competencias parentales</h3>
+          <p data-i18n="serv.parental.text">Acompañamiento a madres, padres y cuidadores para comprender lo que ocurre en casa, fortalecer el vínculo y desarrollar herramientas concretas de crianza y manejo conductual.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6l3.8 8.2 9 1.1-6.6 6.1 1.7 8.9L20 26l-7.9 4.3 1.7-8.9-6.6-6.1 9-1.1L20 6Z"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.vocacional.title">Orientación vocacional</h3>
+          <p data-i18n="serv.vocacional.text">Proceso con adolescentes para explorar intereses, habilidades y expectativas, y tomar decisiones vocacionales con más claridad y menos angustia.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 8v24M8 20h24" opacity=".35"></path>
+              <circle cx="20" cy="20" r="13"></circle>
+              <circle cx="20" cy="20" r="6"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.relajacion.title">Terapias de relajación</h3>
+          <p data-i18n="serv.relajacion.text">Respiración guiada, relajación y técnicas de regulación emocional para acompañar cuadros de ansiedad, crisis de pánico, estrés y trastornos del sueño.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 25c0-6 5-10 12-10s12 4 12 10c0 4-3 6-6 6H14c-3 0-6-2-6-6Z"></path>
+              <circle cx="13" cy="11" r="3"></circle>
+              <circle cx="27" cy="11" r="3"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="serv.talleres.title">Talleres e intervención asistida con animales</h3>
+          <p data-i18n="serv.talleres.text">Talleres de desarrollo personal, educación emocional y habilidades sociales, además de intervención asistida con animales como recurso terapéutico complementario.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESPECIALIDADES ============ -->
+  <section class="section section-alt" id="especialidades">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="esp.eyebrow" class="eyebrow">Especialidades</p>
+        <h2 data-i18n="esp.title" class="section-title">Temáticas y motivos de consulta que atiendo</h2>
+        <p data-i18n="esp.lead" class="section-lead">Trabajo con niñxs, adolescentes, adultos y adultos mayores en un amplio rango de temáticas emocionales, conductuales y vinculares. Esta lista es solo una referencia: si tu motivo de consulta no aparece aquí, igual puedes escribirme para conversarlo.</p>
+      </div>
+      <ul class="specialty-tags">
+        <li data-i18n="esp.1">Trastornos de ansiedad</li>
+        <li data-i18n="esp.2">Crisis de pánico</li>
+        <li data-i18n="esp.3">Angustia</li>
+        <li data-i18n="esp.4">Cuadros de estrés</li>
+        <li data-i18n="esp.5">Trastornos depresivos</li>
+        <li data-i18n="esp.6">Trastornos del estado de ánimo</li>
+        <li data-i18n="esp.7">Duelos y duelos patológicos</li>
+        <li data-i18n="esp.8">Problemas de autoestima</li>
+        <li data-i18n="esp.9">Autoconocimiento</li>
+        <li data-i18n="esp.10">Gestión emocional</li>
+        <li data-i18n="esp.11">Baja tolerancia a la frustración</li>
+        <li data-i18n="esp.12">TDAH y TDA (abordaje emocional)</li>
+        <li data-i18n="esp.13">Trastornos del sueño</li>
+        <li data-i18n="esp.14">Dependencia emocional</li>
+        <li data-i18n="esp.15">Patrones de apego</li>
+        <li data-i18n="esp.16">Heridas de infancia</li>
+        <li data-i18n="esp.17">Temáticas con figuras parentales</li>
+        <li data-i18n="esp.18">Fobia social</li>
+        <li data-i18n="esp.19">Trastorno de estrés postraumático</li>
+        <li data-i18n="esp.20">Trastornos adaptativos</li>
+        <li data-i18n="esp.21">Trastornos psicosomáticos</li>
+        <li data-i18n="esp.22">Nutrición emocional</li>
+        <li data-i18n="esp.23">Enuresis</li>
+        <li data-i18n="esp.24">Trastornos de conducta en edad preescolar</li>
+        <li data-i18n="esp.25">Desarrollo infantil</li>
+        <li data-i18n="esp.26">Habilidades personales y sociales</li>
+        <li data-i18n="esp.27">Competencias parentales</li>
+        <li data-i18n="esp.28">Orientación vocacional</li>
+        <li data-i18n="esp.29">Temáticas sociales y laborales</li>
+        <li data-i18n="esp.30">Orientación y crecimiento personal</li>
+      </ul>
+      <p class="specialty-note"><span data-i18n="esp.note">¿Tienes dudas sobre si trabajo con tu caso?</span> <a data-i18n="esp.noteLink1" href="#contacto">Escríbeme</a> <span data-i18n="esp.noteOr">o revisa las</span> <a data-i18n="esp.noteLink2" href="#faq">preguntas frecuentes</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO TRABAJO ============ -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="proc.eyebrow" class="eyebrow">Cómo trabajo</p>
+        <h2 data-i18n="proc.title" class="section-title">Un proceso claro, a tu ritmo</h2>
+        <p data-i18n="proc.lead" class="section-lead">Cada proceso es distinto, pero estos cuatro momentos se repiten en casi todos. Saber qué esperar suele bajar bastante la ansiedad de la primera sesión.</p>
+      </div>
+      <div class="steps-list reveal">
+
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3 data-i18n="proc.s1.title">Primer contacto</h3>
+            <p data-i18n="proc.s1.text">Reservas tu hora en Doctoralia o me escribes por WhatsApp contándome brevemente qué te trae a consulta y si prefieres atención online o presencial.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3 data-i18n="proc.s2.title">Primera sesión</h3>
+            <p data-i18n="proc.s2.text">Conversamos con calma sobre tu motivo de consulta, tu historia y lo que esperas del proceso. En el caso de niñxs, la primera entrevista es con las figuras parentales.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3 data-i18n="proc.s3.title">Plan de trabajo</h3>
+            <p data-i18n="proc.s3.text">Definimos objetivos en conjunto y elegimos las herramientas que mejor se ajusten a ti: emocionales, socio-familiares o cognitivo-conductuales, y psicodiagnóstico si se requiere.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3 data-i18n="proc.s4.title">Proceso y cierre</h3>
+            <p data-i18n="proc.s4.text">Avanzamos sesión a sesión, revisando los cambios. Cuando los objetivos se cumplen, el espaciado de las sesiones y el cierre también se trabajan, sin cortes bruscos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPINIONES ============
+       NOTA: los tres textos de abajo son un RESUMEN de opiniones
+       publicadas en Doctoralia, no citas textuales. Si quieres
+       publicar las palabras exactas de un paciente, pídele su
+       autorización y reemplaza el texto (y el nombre) aquí y en
+       el diccionario de idiomas del final del archivo.
+  -->
+  <section class="section testimonios-section" id="opiniones">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="op.eyebrow" class="eyebrow">Opiniones</p>
+        <h2 data-i18n="op.title" class="section-title">Procesos que dejaron huella</h2>
+        <p data-i18n="op.lead" class="section-lead">Personas que han hecho terapia conmigo han compartido su experiencia en Doctoralia. Estos son algunos de los temas que más se repiten en sus opiniones.</p>
+      </div>
+
+      <div class="testi-grid">
+
+        <article class="testi-card reveal">
+          <p class="testi-stars" aria-hidden="true">★★★★★</p>
+          <p data-i18n="op.q1" class="testi-quote">Después de varios meses de proceso, describe haber aprendido a conocerse, a valorarse y a recuperar la confianza en sí misma.</p>
+          <p class="testi-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.4-9.5 9-9.5 9Z"></path></svg> <span data-i18n="op.a1">Psicoterapia adulto · Online</span></p>
+        </article>
+
+        <article class="testi-card reveal">
+          <p class="testi-stars" aria-hidden="true">★★★★★</p>
+          <p data-i18n="op.q2" class="testi-quote">Destaca un trato cercano y respetuoso, que genera un espacio de confianza y hace que las sesiones se sientan amenas.</p>
+          <p class="testi-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.4-9.5 9-9.5 9Z"></path></svg> <span data-i18n="op.a2">Psicoterapia individual · Presencial</span></p>
+        </article>
+
+        <article class="testi-card reveal">
+          <p class="testi-stars" aria-hidden="true">★★★★★</p>
+          <p data-i18n="op.q3" class="testi-quote">Menciona un ambiente tranquilo y contenedor, con paciencia y preocupación real por el bienestar de quien consulta.</p>
+          <p class="testi-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.4-9.5 9-9.5 9Z"></path></svg> <span data-i18n="op.a3">Consulta online · Proceso personal</span></p>
+        </article>
+
+      </div>
+      <p class="testi-note"><span data-i18n="op.note" class="fill-me">Resumen de opiniones publicadas en Doctoralia. Reemplázalas por testimonios textuales si cuentas con la autorización de esas personas.</span></p>
+
+      <div class="doctoralia-card reveal">
+        <span class="doctoralia-stars" aria-hidden="true">★★★★★</span>
+        <p data-i18n="op.doctoralia">Hay 21 opiniones verificadas de pacientes en mi perfil de Doctoralia, con citas confirmadas por la plataforma.</p>
+        <a data-i18n="op.doctoraliaBtn" class="btn btn-ghost" href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">Ver opiniones en Doctoralia →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="section section-alt" id="ubicacion">
+    <div class="container ubicacion-grid">
+      <div class="reveal">
+        <p data-i18n="ubi.eyebrow" class="eyebrow">Ubicación</p>
+        <h2 data-i18n="ubi.title" class="section-title">Online o presencial en Viña del Mar</h2>
+        <p data-i18n="ubi.lead" class="section-lead">Atiendo por videoconsulta desde cualquier lugar y de forma presencial en dos centros de Viña del Mar. Puedes elegir el que te quede más cómodo al reservar tu hora.</p>
+
+        <div class="place-list">
+          <div class="place">
+            <h3 data-i18n="ubi.p1.title">Centro Alt Potencial</h3>
+            <p data-i18n="ubi.p1.text">1 Oriente 252, Viña del Mar · Atención presencial para niñxs desde 4 años, adolescentes y adultos.</p>
+            <a data-i18n="ubi.howto" href="https://www.google.com/maps/search/?api=1&amp;query=-33.0201454,-71.5495605" target="_blank" rel="noopener noreferrer">Cómo llegar →</a>
+          </div>
+          <div class="place">
+            <h3 data-i18n="ubi.p2.title">Centro Casona Poniente</h3>
+            <p data-i18n="ubi.p2.text">Viña del Mar · Segunda consulta presencial, en un entorno tranquilo y acogedor.</p>
+            <a data-i18n="ubi.howto2" href="https://www.google.com/maps/search/?api=1&amp;query=-33.017086,-71.554039" target="_blank" rel="noopener noreferrer">Cómo llegar →</a>
+          </div>
+          <div class="place">
+            <h3 data-i18n="ubi.p3.title">Consulta online</h3>
+            <p data-i18n="ubi.p3.text">Videollamada desde tu casa, oficina o donde estés. Recibes el enlace de conexión antes de la sesión.</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://www.google.com/maps?q=-33.0201454,-71.5495605&amp;z=16&amp;output=embed" title="Mapa de ubicación — 1 Oriente 252, Viña del Mar" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALORES ============ -->
+  <section class="section" id="valores">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="val.eyebrow" class="eyebrow">Valores y previsión</p>
+        <h2 data-i18n="val.title" class="section-title">Valores de las atenciones</h2>
+        <p data-i18n="val.lead" class="section-lead">Los valores dependen del tipo de atención y de la modalidad. Si tienes dudas sobre cuál corresponde a tu caso, escríbeme antes de reservar y lo vemos juntxs.</p>
+      </div>
+
+      <div class="price-grid">
+
+        <div class="price-card reveal">
+          <p data-i18n="val.c1.kicker" class="price-kicker">Psicoterapia · Online</p>
+          <h3 data-i18n="val.c1.title">Orientación psicológica online</h3>
+          <div class="price-value"><span class="fill-me">$18.000</span></div>
+          <p data-i18n="val.c1.text">Sesión por videollamada de aproximadamente 50 minutos, para adolescentes y adultos que prefieren atenderse desde su casa.</p>
+          <hr class="price-divider">
+          <a data-i18n="cta.reservarArrow" class="btn btn-ghost" href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">Reservar hora →</a>
+        </div>
+
+        <div class="price-card reveal">
+          <p data-i18n="val.c2.kicker" class="price-kicker">Evaluación</p>
+          <h3 data-i18n="val.c2.title">Técnicas proyectivas gráficas</h3>
+          <div class="price-value"><span class="fill-me">$35.000</span></div>
+          <p data-i18n="val.c2.text">Aplicación e interpretación de técnicas proyectivas gráficas dentro de un proceso de psicodiagnóstico, con entrega de resultados.</p>
+          <hr class="price-divider">
+          <a data-i18n="cta.consultarWhatsapp" class="btn btn-ghost" href="https://wa.me/56991356265?text=Hola%20Mar%C3%ADa%20Jos%C3%A9%2C%20quisiera%20consultar%20por%20un%20psicodiagn%C3%B3stico" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
+        </div>
+
+        <div class="price-card reveal">
+          <p data-i18n="val.c3.kicker" class="price-kicker">Grupal</p>
+          <h3 data-i18n="val.c3.title">Talleres de desarrollo personal</h3>
+          <div class="price-value"><span class="fill-me">$35.000</span></div>
+          <p data-i18n="val.c3.text">Talleres de educación emocional, autoestima y habilidades personales y sociales, en formato individual o para grupos pequeños.</p>
+          <hr class="price-divider">
+          <a data-i18n="cta.consultarWhatsapp" class="btn btn-ghost" href="https://wa.me/56991356265?text=Hola%20Mar%C3%ADa%20Jos%C3%A9%2C%20quisiera%20consultar%20por%20los%20talleres" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
+        </div>
+
+        <div class="price-card reveal">
+          <p data-i18n="val.c4.kicker" class="price-kicker">Psicoterapia · Presencial</p>
+          <h3 data-i18n="val.c4.title">Sesión presencial en Viña del Mar</h3>
+          <div class="price-value"><span data-i18n="val.c4.value" class="fill-me">Consultar valor</span></div>
+          <p data-i18n="val.c4.text">Sesión de psicoterapia individual, infantil o de adolescentes en Centro Alt Potencial o Centro Casona Poniente.</p>
+          <hr class="price-divider">
+          <a data-i18n="cta.consultarWhatsapp" class="btn btn-ghost" href="https://wa.me/56991356265?text=Hola%20Mar%C3%ADa%20Jos%C3%A9%2C%20quisiera%20consultar%20por%20el%20valor%20de%20la%20sesi%C3%B3n%20presencial" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
+        </div>
+
+      </div>
+
+      <p class="prevision-note reveal" data-i18n-html="val.prevision"><strong>Previsión y formas de pago:</strong> se emite boleta reembolsable en Isapres y se acepta Fonasa según la modalidad y el lugar de atención. El pago se realiza por transferencia bancaria y, en atención presencial, también en efectivo. La cobertura de cada previsión varía, así que conviene revisarla antes de la primera sesión.</p>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS FRECUENTES ============ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <p data-i18n="faq.eyebrow" class="eyebrow">Preguntas frecuentes</p>
+        <h2 data-i18n="faq.title" class="section-title">Antes de la primera sesión</h2>
+        <p class="section-lead"><span data-i18n="faq.lead">Algunas dudas que suelen aparecer antes de empezar un proceso. Si tienes otra, escríbeme por</span> <a data-i18n="nav.contacto" href="#contacto">Contacto</a>.</p>
+      </div>
+      <div class="faq-list reveal">
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q1">¿Necesito una derivación médica para iniciar terapia?</summary>
+          <p data-i18n="faq.a1">No es necesario. Puedes agendar directamente una primera sesión conmigo. Si durante el proceso se requiere el apoyo de un psiquiatra o de otro especialista, te lo indico y lo coordinamos en conjunto.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">¿Desde qué edad atiendes a niños y niñas?</summary>
+          <p data-i18n="faq.a2">En atención presencial trabajo con niñxs desde los 4 años y en modalidad online desde los 6 años, además de adolescentes, adultos y adultos mayores.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">¿Atiendes con Fonasa o alguna Isapre?</summary>
+          <p data-i18n="faq.a3">Se emite boleta reembolsable en Isapres y se acepta Fonasa según la modalidad y el lugar de atención. Como la cobertura varía en cada previsión, te recomiendo consultarla antes de la primera sesión.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">¿Cuánto dura una sesión?</summary>
+          <p data-i18n="faq.a4">Cada sesión dura aproximadamente 50 minutos. La primera está destinada a conocer tu motivo de consulta, tu historia y a definir juntxs un plan de trabajo.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">¿Con qué frecuencia son las sesiones?</summary>
+          <p data-i18n="faq.a5">Al inicio suelen ser semanales y, a medida que aparecen avances, se van espaciando a cada quince días o de forma mensual. La frecuencia siempre se conversa y se ajusta a cada proceso.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">¿Qué enfoque terapéutico utilizas?</summary>
+          <p data-i18n="faq.a6">Mi formación inicial fue psicoanalítica y con los años se ha ido conformando hacia un enfoque de intervención integral: uso herramientas emocionales, socio-familiares y cognitivo-conductuales según lo que requiera cada persona.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q7">¿Qué necesito para una sesión online?</summary>
+          <p data-i18n="faq.a7">Un celular, tablet o computador con cámara y micrófono, buena conexión a internet y, muy importante, un espacio privado y tranquilo donde puedas conversar sin interrupciones.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q8">¿Las sesiones son confidenciales?</summary>
+          <p data-i18n="faq.a8">Sí. Todo lo que se conversa está protegido por el secreto profesional. En procesos con niñas, niños y adolescentes comparto con las figuras parentales las orientaciones necesarias, resguardando siempre la intimidad del espacio terapéutico.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q9">¿Realizas psicodiagnóstico e informes?</summary>
+          <p data-i18n="faq.a9">Sí. Realizo psicodiagnóstico infanto juvenil y de adultos con entrevistas, pruebas psicométricas y técnicas proyectivas gráficas, con informe escrito y una sesión de devolución de los resultados.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q10">¿Trabajas con las figuras parentales cuando el proceso es de un niño o niña?</summary>
+          <p data-i18n="faq.a10">Sí. La orientación parental es parte del proceso: se agendan entrevistas periódicas con madres, padres o cuidadores para revisar avances y entregar herramientas concretas para la casa.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q11">¿Puedo cancelar o reprogramar mi hora?</summary>
+          <p data-i18n="faq.a11">Sí, avisando con la mayor anticipación posible por WhatsApp o desde Doctoralia, para poder liberar el horario y coordinar una nueva sesión.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q12">¿Cómo reservo una hora?</summary>
+          <p data-i18n-html="faq.a12">Directamente desde mi <a href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">perfil de Doctoralia</a>, eligiendo día y hora disponible, o escribiéndome por WhatsApp para coordinar.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary data-i18n="faq.q13">¿Dónde puedo leer opiniones de otras personas?</summary>
+          <p data-i18n-html="faq.a13">En la sección <a href="#opiniones">Opiniones ↑</a> de esta página y, con más detalle, en las opiniones verificadas de mi <a href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">perfil de Doctoralia</a>.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section section-dark" id="contacto">
+    <div class="container contacto-inner">
+      <div class="reveal">
+        <p data-i18n="cont.eyebrow" class="eyebrow">Contacto</p>
+        <h2 data-i18n="cont.title" class="section-title">¿Tienes dudas? Escríbeme</h2>
+        <p data-i18n="cont.lead" class="section-lead">Si necesitas más información antes de reservar tu hora, puedes escribirme directamente y te respondo apenas pueda.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <a class="contact-item" href="https://wa.me/56991356265?text=Hola%20Mar%C3%ADa%20Jos%C3%A9%2C%20quisiera%20consultar%20por%20una%20hora" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C10.5 21 3 13.5 3 6a2 2 0 0 1 2-2Z"></path></svg>
+          <div><span data-i18n="cont.whatsapp" class="contact-label">WhatsApp</span><span class="fill-me">+56 9 9135 6265</span></div>
+        </a>
+        <a class="contact-item" href="mailto:ps.mjose.arit@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M4 7l8 6 8-6"></path></svg>
+          <div><span data-i18n="cont.mail" class="contact-label">Correo</span><span>ps.mjose.arit@gmail.com</span></div>
+        </a>
+        <a class="contact-item" href="https://www.instagram.com/ps.mariajose.at/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"></rect><circle cx="12" cy="13.5" r="3.6"></circle><path d="M8.5 7l1.3-2.2h4.4L15.5 7"></path></svg>
+          <div><span data-i18n="cont.instagram" class="contact-label">Instagram</span><span>@ps.mariajose.at</span></div>
+        </a>
+        <a class="contact-item" href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17.3l-5.4 3.2 1.4-6.1-4.6-4 6.1-.5L12 4l2.5 5.9 6.1.5-4.6 4 1.4 6.1z"></path></svg>
+          <div><span data-i18n="cont.doctoralia" class="contact-label">Doctoralia</span><span data-i18n="cont.doctoraliaValue">Reservar hora y opiniones</span></div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/mar%C3%ADa-jos%C3%A9-arias-toro-013212158" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7.5 10.5V17M7.5 7.5v.01M11.5 17v-3.5a2 2 0 0 1 4 0V17"></path></svg>
+          <div><span data-i18n="cont.linkedin" class="contact-label">LinkedIn</span><span data-i18n="cont.linkedinValue">Trayectoria profesional</span></div>
+        </a>
+      </div>
+
+      <div class="contact-actions reveal">
+        <a data-i18n="cta.reservarArrow" class="btn btn-primary" href="https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link" target="_blank" rel="noopener noreferrer">Reservar hora →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-name">Ps. María José Arias Toro</div>
+      <p data-i18n="foot.tag" class="footer-tag">Psicóloga clínica · Online y presencial en Viña del Mar</p>
+    </div>
+    <nav class="footer-links" data-i18n-aria="aria.footerNav" aria-label="Enlaces del pie de página">
+      <a data-i18n="nav.modalidades" href="#modalidades">Modalidades</a>
+      <a data-i18n="nav.sobremi" href="#sobre-mi">Sobre mí</a>
+      <a data-i18n="nav.servicios" href="#servicios">Servicios</a>
+      <a data-i18n="nav.especialidades" href="#especialidades">Especialidades</a>
+      <a data-i18n="nav.proceso" href="#proceso">Cómo trabajo</a>
+      <a data-i18n="nav.opiniones" href="#opiniones">Opiniones</a>
+      <a data-i18n="nav.ubicacion" href="#ubicacion">Ubicación</a>
+      <a data-i18n="nav.valores" href="#valores">Valores</a>
+      <a data-i18n="foot.faq" href="#faq">Preguntas frecuentes</a>
+      <a data-i18n="nav.contacto" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <span><span data-i18n="foot.rights1">©</span> <span id="year"></span> <span data-i18n="foot.rights2">María José Arias Toro. Todos los derechos reservados.</span></span>
+    <span data-i18n="foot.place">Viña del Mar · Valparaíso · Chile</span>
+  </div>
+  <div class="container">
+    <p data-i18n="foot.disclaimer" class="footer-note">Este sitio tiene fines informativos y no reemplaza una consulta psicológica ni psiquiátrica. Si estás atravesando una crisis o una urgencia de salud mental, contacta a Salud Responde (600 360 7777) o acude al servicio de urgencia más cercano.</p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   DICCIONARIO DE IDIOMAS (Español / English)
+   ============================================================
+   Cada texto de la página tiene una "llave" (por ejemplo
+   "hero.title"). Si quieres cambiar una frase, búscala aquí por
+   su llave y edita la versión "es" (y la "en" si corresponde);
+   también puedes editarla directamente en el HTML de arriba,
+   pero entonces acuérdate de cambiarla también aquí, porque el
+   selector ES/EN vuelve a escribir el texto al cargar la página.
+   ============================================================ */
+var I18N_STATIC = {"text": {"skip": {"es": "Saltar al contenido principal", "en": "Skip to main content"}, "brand.tag": {"es": "Psicóloga clínica", "en": "Clinical Psychologist"}, "nav.modalidades": {"es": "Modalidades", "en": "Formats"}, "nav.sobremi": {"es": "Sobre mí", "en": "About me"}, "nav.servicios": {"es": "Servicios", "en": "Services"}, "nav.especialidades": {"es": "Especialidades", "en": "Specialties"}, "nav.proceso": {"es": "Cómo trabajo", "en": "How I work"}, "nav.opiniones": {"es": "Opiniones", "en": "Reviews"}, "nav.ubicacion": {"es": "Ubicación", "en": "Location"}, "nav.valores": {"es": "Valores", "en": "Fees"}, "nav.faq": {"es": "FAQ", "en": "FAQ"}, "nav.contacto": {"es": "Contacto", "en": "Contact"}, "cta.reservar": {"es": "Reservar hora", "en": "Book a session"}, "hero.eyebrow": {"es": "Psicóloga clínica · Online y presencial en Viña del Mar", "en": "Clinical psychologist · Online and in person in Viña del Mar"}, "hero.sub": {"es": "Ps. María José Arias Toro · Psicoterapia para niñxs, adolescentes, adultos y adultos mayores.", "en": "María José Arias Toro · Psychotherapy for children, teens, adults and older adults."}, "hero.desc": {"es": "Alrededor de catorce años acompañando procesos personales desde una mirada integral, que se adapta a lo que cada persona necesita en el ámbito emocional, socio-familiar y cognitivo-conductual. Atención online y presencial en Viña del Mar.", "en": "Around fourteen years accompanying personal processes with an integrative approach that adapts to what each person needs on the emotional, social-family and cognitive-behavioural level. Online sessions and in-person care in Viña del Mar."}, "cta.reservarArrow": {"es": "Reservar hora →", "en": "Book a session →"}, "cta.enfoque": {"es": "Conocer mi enfoque", "en": "See my approach"}, "stat.atencionLabel": {"es": "ATENCIÓN", "en": "I WORK WITH"}, "stat.atencionValue": {"es": "Niñxs, adolescentes y adultos", "en": "Children, teens and adults"}, "stat.expLabel": {"es": "EXPERIENCIA", "en": "EXPERIENCE"}, "stat.expValue": {"es": "≈14 años en área infanto juvenil", "en": "≈14 years in child and adolescent care"}, "stat.modLabel": {"es": "MODALIDAD", "en": "FORMAT"}, "stat.modValue": {"es": "Online · Presencial en Viña del Mar", "en": "Online · In person in Viña del Mar"}, "stat.regLabel": {"es": "REGISTRO", "en": "LICENSE"}, "stat.regValue": {"es": "N° Colegiado 216860", "en": "Professional registry No. 216860"}, "mod.eyebrow": {"es": "Modalidades", "en": "Formats"}, "mod.title": {"es": "Elige cómo prefieres atenderte", "en": "Choose how you'd like to be seen"}, "mod.lead": {"es": "Atiendo online por videoconsulta y de forma presencial en dos consultas de Viña del Mar, para que la terapia se adapte a tu rutina y no al revés.", "en": "I see people online by video consultation and in person at two practices in Viña del Mar, so therapy fits your routine and not the other way around."}, "mod.online.title": {"es": "Online", "en": "Online"}, "mod.online.text": {"es": "Sesiones por videollamada desde cualquier lugar de Chile o del extranjero. Ideal si te acomoda atenderte desde tu casa, viajas seguido o vives fuera de la región.", "en": "Video call sessions from anywhere in Chile or abroad. Ideal if you'd rather be seen from home, travel often, or live outside the region."}, "mod.online.meta": {"es": "Desde los 6 años · Adultos", "en": "From age 6 · Adults"}, "mod.alt.title": {"es": "Presencial · Centro Alt Potencial", "en": "In person · Centro Alt Potencial"}, "mod.alt.meta": {"es": "Desde los 4 años · Adultos", "en": "From age 4 · Adults"}, "mod.casona.title": {"es": "Presencial · Centro Casona Poniente", "en": "In person · Centro Casona Poniente"}, "mod.casona.meta": {"es": "Desde los 4 años · Adultos", "en": "From age 4 · Adults"}, "about.caption": {"es": "Psicóloga · Universidad Andrés Bello", "en": "Psychologist · Universidad Andrés Bello"}, "about.eyebrow": {"es": "Sobre mí", "en": "About me"}, "about.title": {"es": "Hola, soy María José", "en": "Hi, I'm María José"}, "about.p1": {"es": "Soy María José Arias Toro, Psicóloga, con un Magíster en Clínica, mención en Psicodiagnóstico e Intervenciones terapéuticas. Tengo alrededor de catorce años de experiencia en área infanto juvenil. Conjuntamente, he trabajado con población adulta y adulta mayor, observando grandes avances en cada uno de los procesos psicoterapéuticos de mis pacientes.", "en": "I'm María José Arias Toro, a Psychologist with a Master's in Clinical Psychology, specialising in Psychodiagnosis and Therapeutic Interventions. I have around fourteen years of experience in child and adolescent care. Alongside that, I have worked with adults and older adults, seeing substantial progress in each of my patients' therapeutic processes."}, "about.p2": {"es": "A lo largo de mi trayectoria profesional me he desempeñado en contexto clínico, educacional, social y en atención primaria de la salud.", "en": "Throughout my professional career I have worked in clinical, educational and social settings, as well as in primary health care."}, "about.p3": {"es": "Mi proceso formativo se llevó a cabo inicialmente desde la mirada psicoanalítica y durante el transcurso de mi carrera profesional se ha conformado hacia un enfoque de intervención integral, que se adapta a las necesidades de cada consultante, en el ámbito emocional, socio-familiar y cognitivo-conductual.", "en": "My training began from a psychoanalytic perspective and, over the course of my career, has taken shape as an integrative approach that adapts to each person's needs on the emotional, social-family and cognitive-behavioural level."}, "about.p4": {"es": "Me encuentro en formación continua y he realizado cursos en diversas temáticas como por ejemplo en: educación emocional, autoestima, desarrollo de habilidades personales y sociales, orientación parental, ansiedad, depresión, intervención lúdica e intervención asistida con animales.", "en": "I am in continuous training and have taken courses on a range of topics, such as emotional education, self-esteem, personal and social skills development, parental guidance, anxiety, depression, play-based intervention and animal-assisted intervention."}, "about.p5": {"es": "En la actualidad me desempeño como psicóloga clínica con niñxs, adolescentes y adultos en modalidad online y presencial, acompañando sus procesos personales y abordando diversas temáticas, a través de una mirada unificada y según lo que requiera cada persona en cuanto a su motivo de consulta.", "en": "Today I work as a clinical psychologist with children, adolescents and adults, both online and in person, accompanying their personal processes and addressing a wide range of topics through a unified perspective, according to what each person needs in relation to their reason for consulting."}, "about.p6": {"es": "Me especializo en tratar trastornos de ansiedad, cuadros de estrés, trastornos depresivos, baja tolerancia a la frustración, abordaje desde lo emocional de temáticas conductuales asociadas o no al TDAH o TDA, autoestima, autoconocimiento, gestión emocional, duelos, orientación y crecimiento personal, trastornos del sueño, orientación vocacional con adolescentes, desarrollo de habilidades personales y sociales, desarrollo y fortalecimiento de competencias parentales, patrones de apego, dependencia emocional, temáticas con figuras parentales, heridas de infancia, temáticas sociales y laborales, trastornos psicosomáticos y nutrición emocional.", "en": "I specialise in anxiety disorders, stress, depressive disorders, low frustration tolerance, the emotional approach to behavioural issues linked or not to ADHD or ADD, self-esteem, self-knowledge, emotional regulation, grief, personal guidance and growth, sleep disorders, vocational guidance with adolescents, personal and social skills development, building and strengthening parenting skills, attachment patterns, emotional dependency, issues involving parental figures, childhood wounds, social and work-related topics, psychosomatic disorders and emotional eating."}, "about.p7": {"es": "Un gusto, bienvenidx.", "en": "A pleasure — welcome."}, "serv.eyebrow": {"es": "Servicios", "en": "Services"}, "serv.title": {"es": "¿En qué puedo acompañarte?", "en": "How can I support you?"}, "serv.lead": {"es": "Evaluación, psicodiagnóstico y psicoterapia a lo largo de todo el ciclo vital, con una mirada integral que se ajusta al motivo de consulta de cada persona.", "en": "Assessment, psychodiagnosis and psychotherapy across the whole life span, with an integrative perspective tailored to each person's reason for consulting."}, "serv.infantil.title": {"es": "Psicoterapia infantil", "en": "Child psychotherapy"}, "serv.infantil.text": {"es": "Acompañamiento a niñas y niños a través de la intervención lúdica: el juego como vía para expresar, ordenar y elaborar lo que todavía no alcanzan a poner en palabras.", "en": "Support for children through play-based intervention: play as a way to express, organise and work through what they can't yet put into words."}, "serv.adolescente.title": {"es": "Psicoterapia en adolescentes", "en": "Psychotherapy for adolescents"}, "serv.adolescente.text": {"es": "Un espacio propio para hablar de identidad, ansiedad, autoestima, relaciones, presión académica y decisiones importantes, con la confianza y la privacidad que la adolescencia necesita.", "en": "A space of their own to talk about identity, anxiety, self-esteem, relationships, academic pressure and important decisions, with the trust and privacy adolescence needs."}, "serv.adulto.title": {"es": "Psicoterapia de adultos y adultos mayores", "en": "Psychotherapy for adults and older adults"}, "serv.adulto.text": {"es": "Procesos individuales para trabajar ansiedad, estrés, ánimo, duelos, dependencia emocional, heridas de infancia, temáticas laborales y crecimiento personal.", "en": "Individual processes to work on anxiety, stress, mood, grief, emotional dependency, childhood wounds, work-related topics and personal growth."}, "serv.psicodiag.title": {"es": "Psicodiagnóstico", "en": "Psychodiagnosis"}, "serv.psicodiag.text": {"es": "Evaluación psicológica infanto juvenil y de adultos mediante entrevistas, pruebas psicométricas y técnicas proyectivas gráficas, con informe escrito y sesión de devolución de resultados.", "en": "Psychological assessment for children, adolescents and adults through interviews, psychometric tests and graphic projective techniques, with a written report and a feedback session."}, "serv.parental.title": {"es": "Orientación y competencias parentales", "en": "Parental guidance and parenting skills"}, "serv.parental.text": {"es": "Acompañamiento a madres, padres y cuidadores para comprender lo que ocurre en casa, fortalecer el vínculo y desarrollar herramientas concretas de crianza y manejo conductual.", "en": "Support for mothers, fathers and caregivers to understand what is happening at home, strengthen the bond and develop concrete parenting and behaviour-management tools."}, "serv.vocacional.title": {"es": "Orientación vocacional", "en": "Vocational guidance"}, "serv.vocacional.text": {"es": "Proceso con adolescentes para explorar intereses, habilidades y expectativas, y tomar decisiones vocacionales con más claridad y menos angustia.", "en": "A process with adolescents to explore interests, skills and expectations, and make vocational decisions with more clarity and less distress."}, "serv.relajacion.title": {"es": "Terapias de relajación", "en": "Relaxation therapies"}, "serv.relajacion.text": {"es": "Respiración guiada, relajación y técnicas de regulación emocional para acompañar cuadros de ansiedad, crisis de pánico, estrés y trastornos del sueño.", "en": "Guided breathing, relaxation and emotional regulation techniques to accompany anxiety, panic attacks, stress and sleep disorders."}, "serv.talleres.title": {"es": "Talleres e intervención asistida con animales", "en": "Workshops and animal-assisted intervention"}, "serv.talleres.text": {"es": "Talleres de desarrollo personal, educación emocional y habilidades sociales, además de intervención asistida con animales como recurso terapéutico complementario.", "en": "Personal development, emotional education and social skills workshops, plus animal-assisted intervention as a complementary therapeutic resource."}, "esp.eyebrow": {"es": "Especialidades", "en": "Specialties"}, "esp.title": {"es": "Temáticas y motivos de consulta que atiendo", "en": "Topics and reasons for consulting"}, "esp.lead": {"es": "Trabajo con niñxs, adolescentes, adultos y adultos mayores en un amplio rango de temáticas emocionales, conductuales y vinculares. Esta lista es solo una referencia: si tu motivo de consulta no aparece aquí, igual puedes escribirme para conversarlo.", "en": "I work with children, adolescents, adults and older adults across a wide range of emotional, behavioural and relational topics. This list is only a reference: if your reason for consulting isn't here, you can still write to me and we'll talk it through."}, "esp.1": {"es": "Trastornos de ansiedad", "en": "Anxiety disorders"}, "esp.2": {"es": "Crisis de pánico", "en": "Panic attacks"}, "esp.3": {"es": "Angustia", "en": "Distress"}, "esp.4": {"es": "Cuadros de estrés", "en": "Stress"}, "esp.5": {"es": "Trastornos depresivos", "en": "Depressive disorders"}, "esp.6": {"es": "Trastornos del estado de ánimo", "en": "Mood disorders"}, "esp.7": {"es": "Duelos y duelos patológicos", "en": "Grief and complicated grief"}, "esp.8": {"es": "Problemas de autoestima", "en": "Self-esteem difficulties"}, "esp.9": {"es": "Autoconocimiento", "en": "Self-knowledge"}, "esp.10": {"es": "Gestión emocional", "en": "Emotional regulation"}, "esp.11": {"es": "Baja tolerancia a la frustración", "en": "Low frustration tolerance"}, "esp.12": {"es": "TDAH y TDA (abordaje emocional)", "en": "ADHD and ADD (emotional approach)"}, "esp.13": {"es": "Trastornos del sueño", "en": "Sleep disorders"}, "esp.14": {"es": "Dependencia emocional", "en": "Emotional dependency"}, "esp.15": {"es": "Patrones de apego", "en": "Attachment patterns"}, "esp.16": {"es": "Heridas de infancia", "en": "Childhood wounds"}, "esp.17": {"es": "Temáticas con figuras parentales", "en": "Issues with parental figures"}, "esp.18": {"es": "Fobia social", "en": "Social phobia"}, "esp.19": {"es": "Trastorno de estrés postraumático", "en": "Post-traumatic stress disorder"}, "esp.20": {"es": "Trastornos adaptativos", "en": "Adjustment disorders"}, "esp.21": {"es": "Trastornos psicosomáticos", "en": "Psychosomatic disorders"}, "esp.22": {"es": "Nutrición emocional", "en": "Emotional eating"}, "esp.23": {"es": "Enuresis", "en": "Enuresis"}, "esp.24": {"es": "Trastornos de conducta en edad preescolar", "en": "Behavioural difficulties in preschoolers"}, "esp.25": {"es": "Desarrollo infantil", "en": "Child development"}, "esp.26": {"es": "Habilidades personales y sociales", "en": "Personal and social skills"}, "esp.27": {"es": "Competencias parentales", "en": "Parenting skills"}, "esp.28": {"es": "Orientación vocacional", "en": "Vocational guidance"}, "esp.29": {"es": "Temáticas sociales y laborales", "en": "Social and work-related topics"}, "esp.30": {"es": "Orientación y crecimiento personal", "en": "Personal guidance and growth"}, "esp.note": {"es": "¿Tienes dudas sobre si trabajo con tu caso?", "en": "Not sure whether I work with your case?"}, "esp.noteLink1": {"es": "Escríbeme", "en": "Write to me"}, "esp.noteOr": {"es": "o revisa las", "en": "or read the"}, "esp.noteLink2": {"es": "preguntas frecuentes", "en": "frequently asked questions"}, "proc.eyebrow": {"es": "Cómo trabajo", "en": "How I work"}, "proc.title": {"es": "Un proceso claro, a tu ritmo", "en": "A clear process, at your own pace"}, "proc.lead": {"es": "Cada proceso es distinto, pero estos cuatro momentos se repiten en casi todos. Saber qué esperar suele bajar bastante la ansiedad de la primera sesión.", "en": "Every process is different, but these four moments come up in almost all of them. Knowing what to expect usually takes a lot of the pressure out of a first session."}, "proc.s1.title": {"es": "Primer contacto", "en": "First contact"}, "proc.s1.text": {"es": "Reservas tu hora en Doctoralia o me escribes por WhatsApp contándome brevemente qué te trae a consulta y si prefieres atención online o presencial.", "en": "You book your session on Doctoralia or message me on WhatsApp, telling me briefly what brings you to therapy and whether you prefer online or in-person care."}, "proc.s2.title": {"es": "Primera sesión", "en": "First session"}, "proc.s2.text": {"es": "Conversamos con calma sobre tu motivo de consulta, tu historia y lo que esperas del proceso. En el caso de niñxs, la primera entrevista es con las figuras parentales.", "en": "We talk calmly about your reason for consulting, your history and what you expect from the process. With children, this first interview is with the parental figures."}, "proc.s3.title": {"es": "Plan de trabajo", "en": "Working plan"}, "proc.s3.text": {"es": "Definimos objetivos en conjunto y elegimos las herramientas que mejor se ajusten a ti: emocionales, socio-familiares o cognitivo-conductuales, y psicodiagnóstico si se requiere.", "en": "We set goals together and choose the tools that fit you best — emotional, social-family or cognitive-behavioural — plus psychodiagnosis if it's needed."}, "proc.s4.title": {"es": "Proceso y cierre", "en": "Process and closure"}, "proc.s4.text": {"es": "Avanzamos sesión a sesión, revisando los cambios. Cuando los objetivos se cumplen, el espaciado de las sesiones y el cierre también se trabajan, sin cortes bruscos.", "en": "We move forward session by session, reviewing changes. When the goals are met, spacing out sessions and closing the process are worked through too, without abrupt endings."}, "op.eyebrow": {"es": "Opiniones", "en": "Reviews"}, "op.title": {"es": "Procesos que dejaron huella", "en": "Processes that left a mark"}, "op.lead": {"es": "Personas que han hecho terapia conmigo han compartido su experiencia en Doctoralia. Estos son algunos de los temas que más se repiten en sus opiniones.", "en": "People who have done therapy with me have shared their experience on Doctoralia. These are some of the themes that come up most often in their reviews."}, "op.q1": {"es": "Después de varios meses de proceso, describe haber aprendido a conocerse, a valorarse y a recuperar la confianza en sí misma.", "en": "After several months of therapy, she describes having learned to know herself, to value herself and to regain confidence in herself."}, "op.a1": {"es": "Psicoterapia adulto · Online", "en": "Adult psychotherapy · Online"}, "op.q2": {"es": "Destaca un trato cercano y respetuoso, que genera un espacio de confianza y hace que las sesiones se sientan amenas.", "en": "Highlights a warm, respectful manner that creates a space of trust and makes sessions feel easy."}, "op.a2": {"es": "Psicoterapia individual · Presencial", "en": "Individual psychotherapy · In person"}, "op.q3": {"es": "Menciona un ambiente tranquilo y contenedor, con paciencia y preocupación real por el bienestar de quien consulta.", "en": "Mentions a calm, containing atmosphere, with patience and genuine concern for the wellbeing of the person consulting."}, "op.a3": {"es": "Consulta online · Proceso personal", "en": "Online consultation · Personal process"}, "op.note": {"es": "Resumen de opiniones publicadas en Doctoralia. Reemplázalas por testimonios textuales si cuentas con la autorización de esas personas.", "en": "Summary of reviews published on Doctoralia. Replace them with verbatim testimonials if you have those people's permission."}, "op.doctoralia": {"es": "Hay 21 opiniones verificadas de pacientes en mi perfil de Doctoralia, con citas confirmadas por la plataforma.", "en": "There are 21 verified patient reviews on my Doctoralia profile, with appointments confirmed by the platform."}, "op.doctoraliaBtn": {"es": "Ver opiniones en Doctoralia →", "en": "See reviews on Doctoralia →"}, "ubi.eyebrow": {"es": "Ubicación", "en": "Location"}, "ubi.title": {"es": "Online o presencial en Viña del Mar", "en": "Online or in person in Viña del Mar"}, "ubi.lead": {"es": "Atiendo por videoconsulta desde cualquier lugar y de forma presencial en dos centros de Viña del Mar. Puedes elegir el que te quede más cómodo al reservar tu hora.", "en": "I see people by video consultation from anywhere, and in person at two centres in Viña del Mar. You can choose whichever suits you best when booking."}, "ubi.p1.title": {"es": "Centro Alt Potencial", "en": "Centro Alt Potencial"}, "ubi.p1.text": {"es": "1 Oriente 252, Viña del Mar · Atención presencial para niñxs desde 4 años, adolescentes y adultos.", "en": "1 Oriente 252, Viña del Mar · In-person care for children from age 4, adolescents and adults."}, "ubi.howto": {"es": "Cómo llegar →", "en": "Get directions →"}, "ubi.p2.title": {"es": "Centro Casona Poniente", "en": "Centro Casona Poniente"}, "ubi.p2.text": {"es": "Viña del Mar · Segunda consulta presencial, en un entorno tranquilo y acogedor.", "en": "Viña del Mar · A second in-person practice, in a quiet and welcoming setting."}, "ubi.howto2": {"es": "Cómo llegar →", "en": "Get directions →"}, "ubi.p3.title": {"es": "Consulta online", "en": "Online consultation"}, "ubi.p3.text": {"es": "Videollamada desde tu casa, oficina o donde estés. Recibes el enlace de conexión antes de la sesión.", "en": "Video call from home, the office or wherever you are. You receive the connection link before the session."}, "val.eyebrow": {"es": "Valores y previsión", "en": "Fees and insurance"}, "val.title": {"es": "Valores de las atenciones", "en": "Session fees"}, "val.lead": {"es": "Los valores dependen del tipo de atención y de la modalidad. Si tienes dudas sobre cuál corresponde a tu caso, escríbeme antes de reservar y lo vemos juntxs.", "en": "Fees depend on the type of care and the format. If you're not sure which one applies to your case, write to me before booking and we'll look at it together."}, "val.c1.kicker": {"es": "Psicoterapia · Online", "en": "Psychotherapy · Online"}, "val.c1.title": {"es": "Orientación psicológica online", "en": "Online psychological guidance"}, "val.c1.text": {"es": "Sesión por videollamada de aproximadamente 50 minutos, para adolescentes y adultos que prefieren atenderse desde su casa.", "en": "A video call session of about 50 minutes, for adolescents and adults who prefer to be seen from home."}, "val.c2.kicker": {"es": "Evaluación", "en": "Assessment"}, "val.c2.title": {"es": "Técnicas proyectivas gráficas", "en": "Graphic projective techniques"}, "val.c2.text": {"es": "Aplicación e interpretación de técnicas proyectivas gráficas dentro de un proceso de psicodiagnóstico, con entrega de resultados.", "en": "Application and interpretation of graphic projective techniques within a psychodiagnostic process, with results provided."}, "cta.consultarWhatsapp": {"es": "Consultar por WhatsApp →", "en": "Ask on WhatsApp →"}, "val.c3.kicker": {"es": "Grupal", "en": "Group"}, "val.c3.title": {"es": "Talleres de desarrollo personal", "en": "Personal development workshops"}, "val.c3.text": {"es": "Talleres de educación emocional, autoestima y habilidades personales y sociales, en formato individual o para grupos pequeños.", "en": "Workshops on emotional education, self-esteem and personal and social skills, individually or in small groups."}, "val.c4.kicker": {"es": "Psicoterapia · Presencial", "en": "Psychotherapy · In person"}, "val.c4.title": {"es": "Sesión presencial en Viña del Mar", "en": "In-person session in Viña del Mar"}, "val.c4.value": {"es": "Consultar valor", "en": "Ask for the fee"}, "val.c4.text": {"es": "Sesión de psicoterapia individual, infantil o de adolescentes en Centro Alt Potencial o Centro Casona Poniente.", "en": "Individual, child or adolescent psychotherapy session at Centro Alt Potencial or Centro Casona Poniente."}, "faq.eyebrow": {"es": "Preguntas frecuentes", "en": "FAQ"}, "faq.title": {"es": "Antes de la primera sesión", "en": "Before your first session"}, "faq.lead": {"es": "Algunas dudas que suelen aparecer antes de empezar un proceso. Si tienes otra, escríbeme por", "en": "Some questions that usually come up before starting a process. If you have another one, write to me through"}, "faq.q1": {"es": "¿Necesito una derivación médica para iniciar terapia?", "en": "Do I need a medical referral to start therapy?"}, "faq.a1": {"es": "No es necesario. Puedes agendar directamente una primera sesión conmigo. Si durante el proceso se requiere el apoyo de un psiquiatra o de otro especialista, te lo indico y lo coordinamos en conjunto.", "en": "No, it isn't required. You can book a first session with me directly. If the support of a psychiatrist or another specialist is needed during the process, I'll let you know and we'll coordinate it together."}, "faq.q2": {"es": "¿Desde qué edad atiendes a niños y niñas?", "en": "From what age do you see children?"}, "faq.a2": {"es": "En atención presencial trabajo con niñxs desde los 4 años y en modalidad online desde los 6 años, además de adolescentes, adultos y adultos mayores.", "en": "In person I work with children from age 4, and online from age 6, as well as with adolescents, adults and older adults."}, "faq.q3": {"es": "¿Atiendes con Fonasa o alguna Isapre?", "en": "Do you accept Fonasa or private health insurance?"}, "faq.a3": {"es": "Se emite boleta reembolsable en Isapres y se acepta Fonasa según la modalidad y el lugar de atención. Como la cobertura varía en cada previsión, te recomiendo consultarla antes de la primera sesión.", "en": "A receipt that can be reimbursed by Isapres is issued, and Fonasa is accepted depending on the format and place of care. Since coverage varies with each insurer, I recommend checking it before the first session."}, "faq.q4": {"es": "¿Cuánto dura una sesión?", "en": "How long does a session last?"}, "faq.a4": {"es": "Cada sesión dura aproximadamente 50 minutos. La primera está destinada a conocer tu motivo de consulta, tu historia y a definir juntxs un plan de trabajo.", "en": "Each session lasts around 50 minutes. The first one is for getting to know your reason for consulting and your history, and for defining a working plan together."}, "faq.q5": {"es": "¿Con qué frecuencia son las sesiones?", "en": "How often are sessions?"}, "faq.a5": {"es": "Al inicio suelen ser semanales y, a medida que aparecen avances, se van espaciando a cada quince días o de forma mensual. La frecuencia siempre se conversa y se ajusta a cada proceso.", "en": "They are usually weekly at the start and, as progress appears, they are spaced out to every two weeks or monthly. Frequency is always discussed and adjusted to each process."}, "faq.q6": {"es": "¿Qué enfoque terapéutico utilizas?", "en": "What therapeutic approach do you use?"}, "faq.a6": {"es": "Mi formación inicial fue psicoanalítica y con los años se ha ido conformando hacia un enfoque de intervención integral: uso herramientas emocionales, socio-familiares y cognitivo-conductuales según lo que requiera cada persona.", "en": "My initial training was psychoanalytic and over the years it has taken shape as an integrative approach: I use emotional, social-family and cognitive-behavioural tools according to what each person needs."}, "faq.q7": {"es": "¿Qué necesito para una sesión online?", "en": "What do I need for an online session?"}, "faq.a7": {"es": "Un celular, tablet o computador con cámara y micrófono, buena conexión a internet y, muy importante, un espacio privado y tranquilo donde puedas conversar sin interrupciones.", "en": "A phone, tablet or computer with a camera and microphone, a good internet connection and — importantly — a private, quiet space where you can talk without interruptions."}, "faq.q8": {"es": "¿Las sesiones son confidenciales?", "en": "Are sessions confidential?"}, "faq.a8": {"es": "Sí. Todo lo que se conversa está protegido por el secreto profesional. En procesos con niñas, niños y adolescentes comparto con las figuras parentales las orientaciones necesarias, resguardando siempre la intimidad del espacio terapéutico.", "en": "Yes. Everything discussed is protected by professional confidentiality. In processes with children and adolescents, I share the necessary guidance with parental figures while always protecting the privacy of the therapeutic space."}, "faq.q9": {"es": "¿Realizas psicodiagnóstico e informes?", "en": "Do you carry out psychodiagnosis and write reports?"}, "faq.a9": {"es": "Sí. Realizo psicodiagnóstico infanto juvenil y de adultos con entrevistas, pruebas psicométricas y técnicas proyectivas gráficas, con informe escrito y una sesión de devolución de los resultados.", "en": "Yes. I carry out psychodiagnosis for children, adolescents and adults using interviews, psychometric tests and graphic projective techniques, with a written report and a session to go over the results."}, "faq.q10": {"es": "¿Trabajas con las figuras parentales cuando el proceso es de un niño o niña?", "en": "Do you work with parental figures when the process is a child's?"}, "faq.a10": {"es": "Sí. La orientación parental es parte del proceso: se agendan entrevistas periódicas con madres, padres o cuidadores para revisar avances y entregar herramientas concretas para la casa.", "en": "Yes. Parental guidance is part of the process: regular interviews with mothers, fathers or caregivers are scheduled to review progress and provide concrete tools for home."}, "faq.q11": {"es": "¿Puedo cancelar o reprogramar mi hora?", "en": "Can I cancel or reschedule my session?"}, "faq.a11": {"es": "Sí, avisando con la mayor anticipación posible por WhatsApp o desde Doctoralia, para poder liberar el horario y coordinar una nueva sesión.", "en": "Yes, by letting me know as far in advance as possible on WhatsApp or through Doctoralia, so the slot can be freed up and a new session arranged."}, "faq.q12": {"es": "¿Cómo reservo una hora?", "en": "How do I book a session?"}, "faq.q13": {"es": "¿Dónde puedo leer opiniones de otras personas?", "en": "Where can I read other people's reviews?"}, "cont.eyebrow": {"es": "Contacto", "en": "Contact"}, "cont.title": {"es": "¿Tienes dudas? Escríbeme", "en": "Have questions? Write to me"}, "cont.lead": {"es": "Si necesitas más información antes de reservar tu hora, puedes escribirme directamente y te respondo apenas pueda.", "en": "If you need more information before booking your session, you can write to me directly and I'll reply as soon as I can."}, "cont.whatsapp": {"es": "WhatsApp", "en": "WhatsApp"}, "cont.mail": {"es": "Correo", "en": "Email"}, "cont.instagram": {"es": "Instagram", "en": "Instagram"}, "cont.doctoralia": {"es": "Doctoralia", "en": "Doctoralia"}, "cont.doctoraliaValue": {"es": "Reservar hora y opiniones", "en": "Booking and reviews"}, "cont.linkedin": {"es": "LinkedIn", "en": "LinkedIn"}, "cont.linkedinValue": {"es": "Trayectoria profesional", "en": "Professional background"}, "foot.tag": {"es": "Psicóloga clínica · Online y presencial en Viña del Mar", "en": "Clinical psychologist · Online and in person in Viña del Mar"}, "foot.faq": {"es": "Preguntas frecuentes", "en": "Frequently asked questions"}, "foot.rights1": {"es": "©", "en": "©"}, "foot.rights2": {"es": "María José Arias Toro. Todos los derechos reservados.", "en": "María José Arias Toro. All rights reserved."}, "foot.place": {"es": "Viña del Mar · Valparaíso · Chile", "en": "Viña del Mar · Valparaíso · Chile"}, "foot.disclaimer": {"es": "Este sitio tiene fines informativos y no reemplaza una consulta psicológica ni psiquiátrica. Si estás atravesando una crisis o una urgencia de salud mental, contacta a Salud Responde (600 360 7777) o acude al servicio de urgencia más cercano.", "en": "This site is for information purposes only and does not replace a psychological or psychiatric consultation. If you are going through a crisis or a mental health emergency, contact Salud Responde (600 360 7777) or go to your nearest emergency service."}, "aria.whatsapp": {"es": "Escribir por WhatsApp", "en": "Write on WhatsApp"}, "aria.footerNav": {"es": "Enlaces del pie de página", "en": "Footer links"}}, "html": {"hero.title": {"es": "Un espacio seguro para <em>volver</em> a ti", "en": "A safe space to <em>come back</em> to yourself"}, "mod.alt.text": {"es": "Atención en box privado en 1 Oriente 252, Viña del Mar, en un espacio pensado para el trabajo clínico infanto juvenil y de adultos. Dirección y mapa en <a href=\"#ubicacion\">Ubicación ↓</a>.", "en": "Care in a private room at 1 Oriente 252, Viña del Mar, in a space designed for clinical work with children, adolescents and adults. Address and map in <a href=\"#ubicacion\">Location ↓</a>."}, "mod.casona.text": {"es": "Segunda consulta presencial en Viña del Mar, en un entorno tranquilo y acogedor. Puedes elegir la que te quede más cómoda al momento de reservar. Ver <a href=\"#ubicacion\">Ubicación ↓</a>.", "en": "A second in-person practice in Viña del Mar, in a quiet and welcoming setting. You can choose whichever is more convenient when booking. See <a href=\"#ubicacion\">Location ↓</a>."}, "about.cred1": {"es": "<strong>Psicóloga</strong> · Universidad Andrés Bello, 2011", "en": "<strong>Psychologist</strong> · Universidad Andrés Bello, 2011"}, "about.cred2": {"es": "<strong>Magíster en Clínica</strong> · Psicodiagnóstico e Intervenciones Terapéuticas", "en": "<strong>Master's in Clinical Psychology</strong> · Psychodiagnosis and Therapeutic Interventions"}, "about.cred3": {"es": "<strong>N° Colegiado</strong> 216860", "en": "<strong>Professional registry</strong> No. 216860"}, "about.cred4": {"es": "<strong>≈14 años</strong> de experiencia clínica", "en": "<strong>≈14 years</strong> of clinical experience"}, "val.prevision": {"es": "<strong>Previsión y formas de pago:</strong> se emite boleta reembolsable en Isapres y se acepta Fonasa según la modalidad y el lugar de atención. El pago se realiza por transferencia bancaria y, en atención presencial, también en efectivo. La cobertura de cada previsión varía, así que conviene revisarla antes de la primera sesión.", "en": "<strong>Insurance and payment:</strong> a receipt that can be reimbursed by Isapres is issued, and Fonasa is accepted depending on the format and place of care. Payment is made by bank transfer and, for in-person care, also in cash. Coverage varies with each insurer, so it's worth checking before the first session."}, "faq.a12": {"es": "Directamente desde mi <a href=\"https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link\" rel=\"noopener noreferrer\" target=\"_blank\">perfil de Doctoralia</a>, eligiendo día y hora disponible, o escribiéndome por WhatsApp para coordinar.", "en": "Directly from my <a href=\"https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link\" target=\"_blank\" rel=\"noopener noreferrer\">Doctoralia profile</a>, choosing an available day and time, or by messaging me on WhatsApp to arrange it."}, "faq.a13": {"es": "En la sección <a href=\"#opiniones\">Opiniones ↑</a> de esta página y, con más detalle, en las opiniones verificadas de mi <a href=\"https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link\" rel=\"noopener noreferrer\" target=\"_blank\">perfil de Doctoralia</a>.", "en": "In the <a href=\"#opiniones\">Reviews ↑</a> section of this page and, in more detail, in the verified reviews on my <a href=\"https://www.doctoralia.cl/perfil/maria-jose-arias-toro?utm_campaign=114554&amp;utm_medium=link&amp;utm_source=widget&amp;utm_term=instagram-profile-link\" target=\"_blank\" rel=\"noopener noreferrer\">Doctoralia profile</a>."}}};
+</script>
+<script>
+/* ============================================================
+   I18N — Selector de idioma Español / English
+   ============================================================
+   - I18N_STATIC.text: { llave: {es, en} } para elementos
+     [data-i18n] (se reemplaza textContent).
+   - I18N_STATIC.html: { llave: {es, en} } para elementos
+     [data-i18n-html] (se reemplaza innerHTML, para textos que
+     mezclan <strong>/<em>/<a> con el texto).
+   El idioma elegido se recuerda en el navegador (localStorage).
+   ============================================================ */
+
+var CURRENT_LANG = 'es';
+
+function currentLang() { return CURRENT_LANG; }
+
+function getStoredLang() {
+  try { return window.localStorage.getItem('mjat_lang'); } catch (e) { return null; }
+}
+function storeLang(lang) {
+  try { window.localStorage.setItem('mjat_lang', lang); } catch (e) { /* noop */ }
+}
+
+function applyStaticTranslations() {
+  var lang = currentLang();
+
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n');
+    var entry = I18N_STATIC.text[key];
+    if (entry) { el.textContent = entry[lang] || entry.es; }
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-html');
+    var entry = I18N_STATIC.html[key];
+    if (entry) { el.innerHTML = entry[lang] || entry.es; }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-placeholder');
+    var entry = I18N_STATIC.text[key];
+    if (entry) { el.setAttribute('placeholder', entry[lang] || entry.es); }
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-aria');
+    var entry = I18N_STATIC.text[key];
+    if (entry) { el.setAttribute('aria-label', entry[lang] || entry.es); }
+  });
+
+  document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es-CL');
+
+  var langSwitch = document.getElementById('langSwitch');
+  if (langSwitch) {
+    langSwitch.querySelectorAll('.lang-opt').forEach(function (opt) {
+      opt.classList.toggle('is-active', opt.getAttribute('data-lang') === lang);
+    });
+  }
+}
+
+function setLanguage(lang) {
+  CURRENT_LANG = (lang === 'en') ? 'en' : 'es';
+  storeLang(CURRENT_LANG);
+  applyStaticTranslations();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var initialLang = getStoredLang();
+  if (initialLang !== 'en' && initialLang !== 'es') {
+    var browserLang = (navigator.language || 'es').toLowerCase();
+    initialLang = browserLang.indexOf('en') === 0 ? 'en' : 'es';
+  }
+  CURRENT_LANG = initialLang;
+  applyStaticTranslations();
+
+  var langSwitch = document.getElementById('langSwitch');
+  if (langSwitch) {
+    langSwitch.addEventListener('click', function () {
+      setLanguage(currentLang() === 'es' ? 'en' : 'es');
+    });
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Revelado al hacer scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { io.observe(el); });
+    // Red de seguridad: en celulares a veces el IntersectionObserver no
+    // alcanza a dispararse para algun elemento (cambios de orientacion,
+    // casos limite del navegador). Sin esto, esa seccion quedaria
+    // invisible para siempre (opacity:0).
+    setTimeout(function () {
+      revealEls.forEach(function (el) {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+          io.unobserve(el);
+        }
+      });
+    }, 2500);
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // Anio del footer
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  // La onda decorativa va en su propio try/catch: si falla en algun
+  // navegador, no puede romper el resto de la pagina.
+  try {
+    drawCalmWave();
+  } catch (err) {
+    console.error('No se pudo dibujar la onda decorativa del encabezado:', err);
+  }
+});
+
+/* ============================================================
+   ONDA DECORATIVA DEL HERO
+   ============================================================
+   Es la misma idea de la onda del sitio original, pero leida en
+   clave psicologica: parte agitada a la izquierda (ruido, alta
+   amplitud) y se va regulando hacia la derecha hasta convertirse
+   en una respiracion pareja. Se dibuja sola al cargar la pagina.
+   ============================================================ */
+function drawCalmWave() {
+  var path = document.getElementById('waveformPath');
+  if (!path) return;
+  var W = 1200, H = 220, MID = H / 2, N = 170;
+  var pts = [];
+  for (var i = 0; i <= N; i++) {
+    var t = i / N;
+    var chaos = Math.pow(1 - t, 2.1);          // el desorden se apaga hacia la derecha
+    var freq = 2.4 + 2.6 * (1 - t);            // y la respiracion se hace mas lenta
+    var angle = t * Math.PI * 2 * freq;
+    var calm = Math.sin(angle) * (H * 0.17);
+    var jitterAmp = H * 0.30 * chaos;
+    var jitter = (Math.random() * 2 - 1) * jitterAmp + Math.sin(i * 2.1) * jitterAmp * 0.4;
+    var y = MID + calm * (1 - chaos * 0.2) + jitter;
+    pts.push([t * W, y]);
+  }
+  var d = 'M ' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+  for (var j = 1; j < pts.length - 1; j++) {
+    var x1 = pts[j][0], y1 = pts[j][1];
+    var x2 = pts[j + 1][0], y2 = pts[j + 1][1];
+    var mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+    d += ' Q ' + x1.toFixed(1) + ',' + y1.toFixed(1) + ' ' + mx.toFixed(1) + ',' + my.toFixed(1);
+  }
+  var last = pts[pts.length - 1];
+  d += ' L ' + last[0].toFixed(1) + ',' + last[1].toFixed(1);
+  path.setAttribute('d', d);
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion) {
+    var len = path.getTotalLength();
+    path.style.strokeDasharray = String(len);
+    path.style.strokeDashoffset = String(len);
+    path.getBoundingClientRect();
+    path.style.transition = 'stroke-dashoffset 1.8s ease-out';
+    requestAnimationFrame(function () {
+      path.style.strokeDashoffset = '0';
+    });
+  }
+}
+</script>
+</body>
+</html>
